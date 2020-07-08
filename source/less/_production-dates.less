@@ -1,0 +1,67 @@
+.production-dates {
+  padding-top: 50px;
+
+  &__title {
+    color: @orange-color;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-top: 10px;
+    color: @grey-color;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    height: 96px;
+
+    p {
+      margin-left: 15%;
+      font-weight: 700;
+      color: @orange-color;
+    }
+
+    &:last-child {
+      margin-bottom: 25px;
+    }
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+      position: relative;
+
+      &::after {
+        content: url("../img/right-arrow.svg");
+        position: absolute;
+        left: 50%;
+        top: -28px;
+        transform: translateX(-50%);
+        opacity: 0.2;
+      }
+
+      &::before {
+        content: url("../img/left-arrow.svg");
+        position: absolute;
+        left: 50%;
+        bottom: -28px;
+        transform: translateX(-50%);
+        opacity: 0.2;
+      }
+
+      p {
+        margin-left: 0;
+        margin-right: 15%;
+      }
+    }
+  }
+}

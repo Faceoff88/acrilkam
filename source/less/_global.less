@@ -1,0 +1,128 @@
+@orange-color: #d47d42;
+@cream-color: #f7e3c6;
+@doublelight-grey-color: #ececec;
+@light-grey-color: #414141;
+@grey-color: #323232;
+@dark-grey-color: #2b2b2b;
+@tablet-width: 660px;
+@desktop-width: 1200px;
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("../fonts/Montserrat-Light.woff2") format("woff2"),
+    url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+form {
+  overflow-x: hidden;
+}
+
+legend {
+  display: block;
+  min-width: 100%;
+  padding: 0;
+  float: left;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: calc(100% - 40px);
+  max-width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.main {
+  z-index: 1;
+}
+
+fieldset {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+.button {
+  width: 280px;
+  height: 60px;
+  background: @dark-grey-color;
+  border: 1px solid @orange-color;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: @orange-color;
+  font-weight: 700;
+  outline: none;
+  box-shadow: 0 3px 10px rgba(black, 0.4);
+
+  &:hover,
+  &:focus {
+    background: @grey-color;
+  }
+
+  &:active {
+    box-shadow: none;
+    background: @dark-grey-color;
+  }
+}

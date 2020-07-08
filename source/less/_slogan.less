@@ -1,0 +1,43 @@
+.slogan {
+  margin-top: -118px;
+  background-image: url("../img/slogan-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: calc(100vh - 30px);
+
+  .wrapper {
+    position: relative;
+    padding-top: 118px;
+
+    &::before {
+      content: url("../img/slogan-bg-image.jpg");
+      position: absolute;
+      top: 145px;
+      right: 0;
+      box-shadow: 0 3px 10px rgba(black, 0.4);
+      z-index: -1;
+    }
+  }
+
+  &__text {
+    margin-top: 65px;
+    max-width: 260px;
+
+    span {
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 20px;
+      color: @orange-color;
+      background: black;
+    }
+  }
+
+  &__title {
+    color: @cream-color;
+    line-height: 36px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 260px;
+  }
+}

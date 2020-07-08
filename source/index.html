@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Acrilkam</title>
+</head>
+<body>
+  <header class="page-header">
+    <div class="wrapper">
+      <div class="page-header__top">
+        <a class="page-header__logo logo">
+          <img src="img/logo.svg" alt="Логотип сайта" class="page-hader__logo-image logo__image">
+        </a>
+        <nav class="page-header__nav main-nav visually-hidden">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#" class="main-nav__link">О нас</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Наши работы</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Материал</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Ремонт</a></li>
+          </ul>
+          <button class="main-nav__close" value="закрыть меню">закрыть меню</button>
+        </nav>
+        <button class="main-nav__button toggle-button" value="открыть меню"></button>
+      </div>
+      <div class="page-header__bottom">
+        <ul class="page-header__social-icons social-icons social-icons__list">
+          <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/instagram.svg" alt="Инстаграм" class="social-icons__image"></a></li>
+          <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/telegram.svg" alt="Телеграм" class="social-icons__image"></a></li>
+          <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/whatsapp.svg" alt="Ватсап" class="social-icons__image"></a></li>
+        </ul>
+        <a href="tel:+79265672683" class="page-header__phone phone">+7 926 567-26-83</a>
+      </div>
+    </div>
+  </header>
+  <main class="main-page">
+    <h1 class="visually-hidden">Производство изделий из искуственного камня</h1>
+    <section class="slogan">
+      <div class="wrapper">
+        <p class="slogan__text"><span>Производим и монтируем стойки, столешницы, подоконники, раковины и другое</span></p>
+        <h2 class="slogan__title">Изделия из искуственного камня и кварца</h2>
+        <button class="slogan__button button">Расчитать стоимость</button>
+      </div>
+    </section>
+    <section class="production-dates">
+      <div class="wrapper">
+        <h2 class="production-dates__title">Сроки производства</h2>
+        <p class="production-dates__subtitle">от 1 до 7 дней под ключ</p>
+        <ul class="production-dates__list">
+          <li class="production-dates__item">
+            <img src="img/set-square.svg" alt="Замеры" class="production-dates__image">
+            <p class="production-dates__description">Замеры</p>
+          </li>
+          <li class="production-dates__item">
+            <img src="img/hand.svg" alt="Производство" class="production-dates__image">
+            <p class="production-dates__description">Производство</p>
+          </li>
+          <li class="production-dates__item">
+            <img src="img/puzzle.svg" alt="Монтаж" class="production-dates__image">
+            <p class="production-dates__description">Монтаж</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="calculate">
+      <div class="wrapper">
+        <h2 class="calculate__title">Расчитать стоимость</h2>
+        <p class="calculate__subtitle">Ниже выберите изделие которое хотите расчитать</p>
+        <ul class="calculate__products-list products products__list">
+          <li class="products__item products--active">
+            <img src="img/stoleshnica.svg" alt="Столешница" class="products__image">
+            <p class="products__description">Столешница</p>
+          </li>
+          <li class="products__item">
+            <img src="img/podokonnik.svg" alt="Подоконник" class="products__image">
+            <p class="products__description">Подоконник</p>
+          </li>
+          <li class="products__item">
+            <img src="img/stavni.svg" alt="Ставни" class="products__image">
+            <p class="products__description">Оконные откосы</p>
+          </li>
+          <li class="products__item">
+            <img src="img/rakovina.svg" alt="Раковина" class="products__image">
+            <p class="products__description">Раковина</p>
+          </li>
+          <li class="products__item">
+            <img src="img/resepshen.svg" alt="Ресепшн" class="products__image">
+            <p class="products__description">Стойка ресепшн</p>
+          </li>
+          <li class="products__item">
+            <img src="img/bar.svg" alt="Барная стойка" class="products__image">
+            <p class="products__description">Барная стойка</p>
+          </li>
+        </ul>
+        <a href="#" class="calculate__callback-button callback-button">Не нашли подходящее?</a>
+        <div class="calculate__edit-selected edit-selected">
+          <div class="edit-selected__container">
+            <div class="edit-selected__title-container">
+              <h3 class="edit-selected__title">Расчитать стоимость</h3>
+              <h4 class="edit-selected__subtitle">Столешницы</h4>
+            </div>
+            <button class="edit-selected__next-button">Подоконники</button>
+          </div>
+          <ul class="edit-selected__list">
+            <li class="edit-selected__item step step--one">
+              <span class="step__number">01</span>
+              <p class="step__title">Выберите форму</p>
+              <ul class="step__list">
+                <li class="step__item">
+                  <img src="img/straight.svg" alt="Прямая столешница" class="step__form-image">
+                </li>
+                <li class="step__item">
+                  <img src="img/angular.svg" alt="Угловая столешница" class="step__form-image">
+                </li>
+                <li class="step__item">
+                  <img src="img/u-shaped.svg" alt="П-образная столешница" class="step__form-image">
+                </li>
+                <li class="step__item">
+                  <a href="#" class="step__callback-button callback-button">Не нашли?</a>
+                </li>
+              </ul>
+            </li>
+            <li class="edit-selected__item step formfactor">
+              <span class="step__number">02</span>
+              <p class="step__title">Укажите размеры</p>
+              <div class="step__input-sizes input-sizes">
+                <div class="input-sizes__image-container">
+                  <img src="img/p-obraznaya.svg" alt="П-образная столешница" class="input-sizes__image">
+                </div>
+                <ul class="input-sizes__list">
+                  <li class="input-sizes__item">
+                    <p class="input-side-name">a</p>
+                    <input type="text" class="input-side-a" placeholder="Размер, мм">
+                  </li>
+                  <li class="input-sizes__item">
+                    <p class="input-side-name">b</p>
+                    <input type="text" class="input-side-b" placeholder="Размер, мм">
+                  </li>
+                  <li class="input-sizes__item">
+                    <p class="input-side-name">c</p>
+                    <input type="text" class="input-side-c" placeholder="Размер, мм">
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="edit-selected__item step materials">
+              <span class="step__number">03</span>
+              <p class="step__title">Выберите материал</p>
+              <ul class="edit-selected__materials materials__list">
+                <li class="materials__item">
+                  <h5 class="materials__title">Акрил</h5>
+                  <ul class="materials__description-list">
+                    <li class="description-list__item">Дешевле</li>
+                    <li class="description-list__item">Полируется</li>
+                    <li class="description-list__item">Без швов</li>
+                  </ul>
+                </li>
+                <li class="materials__item">
+                  <h5 class="materials__title">Кварц</h5>
+                  <ul class="materials__description-list">
+                    <li class="description-list__item">Дороже</li>
+                    <li class="description-list__item">Не царапается</li>
+                    <li class="description-list__item">Шов 1 - 2 мм</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="edit-selected__item">
+              <h5 class="edit-selected__title result-title">Предварительный расчет</h5>
+              <span class="result__sum">7400<sup>руб</sup></span>
+              <p class="result__description">Указанная стоимость включает производство по Вашим размерам и предмонтажную полировку изделия. Более точный заказ Вы можете сделать с помощью менеджера.</p>
+              <button class="result__callback-button button">Оформить с помощью менеджера</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="completed-work">
+      <div class="wrapper">
+        <div class="completed-work__title-container">
+          <h2 class="completed-work__title">Выполненные работы</h2>
+          <a href="#" class="completed-work__subtitle">@acrilkam</a>
+        </div>
+        <ul class="completed-work__list">
+          <li class="completed-work__item">
+            <nav class="completed-work__nav">
+              <ul class="completed-worl__nav-list">
+                <li class="completed-work__nav-item"><a href="#" class="completed-work__nav-btn">Все изделия</a></li>
+                <li class="completed-work__nav-item"><a href="#" class="completed-work__nav-btn">Камины</a></li>
+                <li class="completed-work__nav-item"><a href="#" class="completed-work__nav-btn">Раковины</a></li>
+                <li class="completed-work__nav-item"><a href="#" class="completed-work__nav-btn">Столешницы</a></li>
+                <li class="completed-work__nav-item"><a href="#" class="completed-work__nav-btn">Подоконники</a></li>
+                <li class="completed-work__nav-item"><a href="#" class="completed-work__nav-btn">Стойки ресепшн</a></li>
+              </ul>
+            </nav>
+          </li>
+          <li class="completed-work__item">
+            <img src="img/1.jpg" alt="Столешница" class="completed-work__image">
+            <div class="completed-work__params">
+              <p class="completed-work__sizes">1200 Х 570 Х 450 мм</p>
+              <p class="completed-work__price">23500.-</p>
+            </div>
+            <h3 class="completed-work__name">Столешница</h4>
+            <h4 class="completed-work__material">Акрил</h5>
+          </li>
+          <li class="completed-work__item">
+            <img src="img/2.jpg" alt="Столешница" class="completed-work__image">
+            <div class="completed-work__params">
+              <p class="completed-work__sizes">1200 Х 570 Х 450 мм</p>
+              <p class="completed-work__price">19500.-</p>
+            </div>
+            <h3 class="completed-work__name">Столешница</h4>
+            <h4 class="completed-work__material">Акрил</h5>
+          </li>
+          <li class="completed-work__item">
+            <img src="img/3.jpg" alt="Раковина" class="completed-work__image">
+            <div class="completed-work__params">
+              <p class="completed-work__sizes">1200 Х 570 Х 450 мм</p>
+              <p class="completed-work__price">9500.-</p>
+            </div>
+            <h3 class="completed-work__name">Раковина</h4>
+            <h4 class="completed-work__material">Акрил</h5>
+          </li>
+          <li class="completed-work__item">
+            <img src="img/4.jpg" alt="Стойка ресепшн" class="completed-work__image">
+            <div class="completed-work__params">
+              <p class="completed-work__sizes">1200 Х 570 Х 450 мм</p>
+              <p class="completed-work__price">54000.-</p>
+            </div>
+            <h3 class="completed-work__name">Стойка ресепшн</h4>
+            <h4 class="completed-work__material">Акрил</h5>
+          </li>
+          <li class="completed-work__item">
+            <img src="img/5.jpg" alt="Камин" class="completed-work__image">
+            <div class="completed-work__params">
+              <p class="completed-work__sizes">1200 Х 570 Х 450 мм</p>
+              <p class="completed-work__price">15300.-</p>
+            </div>
+            <h3 class="completed-work__name">Камин</h4>
+            <h4 class="completed-work__material">Акрил</h5>
+          </li>
+        </ul>
+        <a href="#" class="completed-work__more">Смотреть все</a>
+      </div>
+    </section>
+    <section class="news">
+      <div class="wrapper">
+        <h2 class="news__title">Полезные статьи</h2>
+        <ul class="news__list">
+          <li class="news__item">
+            <img src="img/news-image.jpg" alt="Новостная картинка" class="news__item-image">
+            <h3 class="news__item-title">Изготовление столешниц из искусственного камня</h3>
+            <p class="news__item-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого вскоре, необходимыми предупреждал не над деревни знаках всемогущая, повстречался назад снова образ текстов семь гор. Рыбного образ дороге решила!</p>
+          </li>
+          <li class="news__item">
+            <img src="img/news-image.jpg" alt="Новостная картинка" class="news__item-image">
+            <h3 class="news__item-title">Изготовление столешниц из искусственного камня</h3>
+            <p class="news__item-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого вскоре, необходимыми предупреждал не над деревни знаках всемогущая, повстречался назад снова образ текстов семь гор. Рыбного образ дороге решила!</p>
+          </li>
+          <li class="news__item">
+            <img src="img/news-image.jpg" alt="Новостная картинка" class="news__item-image">
+            <h3 class="news__item-title">Изготовление столешниц из искусственного камня</h3>
+            <p class="news__item-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого вскоре, необходимыми предупреждал не над деревни знаках всемогущая, повстречался назад снова образ текстов семь гор. Рыбного образ дороге решила!</p>
+          </li>
+        </ul>
+        <a href="#" class="news__button-more">Показать все статьи</a>
+      </div>
+    </section>
+    <footer class="footer-page">
+      <div class="wrapper">
+        <div class="footer-page__top">
+          <ul class="footer-page__contacts-list">
+            <li class="footer-page__contacts-item phone">
+              <p class="phone__title">Телефон</p>
+              <a href="tel:+79265672683">+7 926 567-26-83</a>
+            </li>
+            <li class="footer-page__contacts-item email">
+              <p class="email__title">E-mail</p>
+              <a href="mailto:acrilkam@gmail.com">acrilkam@gmail.com</a>
+            </li>
+            <li class="footer-page__contacts-item address">
+              <div class="address__container">
+                <p class="address__title">Адрес</p>
+                <a href="#" class="address__go-map">Показать на карте</a>
+              </div>
+              <p class="address__text">
+                г. Москва, ул. Тверская-Ямская, д. 1 к. 1
+              </p>
+            </li>
+          </ul>
+          <div class="footer-page__nav-container">
+            <nav class="footer-page__nav nav visually-hidden">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Наши работы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Материал</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Ремонт</a></li>
+              </ul>
+            </nav>
+            <div class="footer-page__copyright-container">
+              <ul class="footer-page__social-icons social-icons social-icons__list">
+                <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/instagram.svg" alt="Инстаграм" class="social-icons__image"></a></li>
+                <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/telegram.svg" alt="Телеграм" class="social-icons__image"></a></li>
+                <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/whatsapp.svg" alt="Ватсап" class="social-icons__image"></a></li>
+              </ul>
+              <p class="footer-page__copyright"><span>© Acrilkam</span> производство и монтаж изделий из исскуственного камня</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-page__bottom order">
+          <ul class="order__list">
+            <li class="order__item">
+              <img src="img/p-obraznaya.svg" alt="П-образная столешница" class="order__image">
+            </li>
+            <li class="order__item">
+              <div class="order__name-and-size">
+                <p class="order__name">Столешница</p>
+                <p class="order__size">
+                  <span>Размер</span>
+                  <span>2000 X 300 X 600 мм</span>
+                </p>
+              </div>
+              <div class="order__preliminary">
+                <p>Предварительный расчёт</p>
+                <p>7400<sub>руб</sub> </p>
+              </div>
+            </li>
+            <li class="footer-page__order-item">
+              <button class="footer-page__button-resume button">Продолжить оформление заказа</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
