@@ -1,0 +1,137 @@
+.footer-page {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  background-color: @dark-grey-color;
+
+  &__contacts-list {
+    max-width: 330px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  &__contacts-item {
+    font-size: 12px;
+    font-weight: 700;
+
+    .email__title,
+    .phone__title {
+      color: @orange-color;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: @cream-color;
+    }
+  }
+
+  &__copyright {
+    margin-top: 30px;
+    color: @light-grey-color;
+    font-size: 14px;
+
+    span {
+      font-weight: 700;
+      color: @cream-color;
+    }
+  }
+}
+
+.phone {
+  margin-right: 40px;
+}
+
+.address {
+  &__container {
+    display: flex;
+    margin-top: 20px;
+
+    p {
+      color: @orange-color;
+    }
+
+    a {
+      color: darken(@orange-color, 20%);
+      text-decoration: underline;
+      margin-left: 10px;
+    }
+  }
+
+  &__text {
+    color: @cream-color;
+    margin-top: 10px;
+  }
+}
+
+.order {
+  margin-top: 40px;
+  background-color: @grey-color;
+  padding: 20px 10px 10px 20px;
+  border-radius: 10px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    &:first-child {
+      width: 130px;
+      height: 130px;
+      background-color: @dark-grey-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+  }
+
+  &__name-and-size {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 14px;
+    color: @cream-color;
+    margin-bottom: 10px;
+  }
+
+  &__size {
+    display: flex;
+    flex-direction: column;
+    color: @cream-color;
+    font-size: 10px;
+
+    span:last-child {
+      margin-top: 5px;
+      font-size: 10px;
+    }
+  }
+
+  &__preliminary {
+    font-size: 14px;
+    margin-top: 20px;
+
+    p:first-child {
+      max-width: 150px;
+      color: @orange-color;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    p:last-child {
+      font-size: 18px;
+      font-weight: 700;
+      color: @cream-color;
+      margin-top: 10px;
+
+      sup {
+        font-size: 12px;
+        margin-left: 3px;
+      }
+    }
+  }
+}
