@@ -11,7 +11,7 @@
     <div class="wrapper">
       <div class="page-header__top">
         <a class="page-header__logo logo">
-          <img src="img/logo.svg" alt="Логотип сайта" class="page-hader__logo-image logo__image">
+          <img src="img/logo.svg" alt="Логотип сайта" class="page-header__logo-image logo__image">
         </a>
         <nav class="page-header__nav main-nav visually-hidden">
           <ul class="main-nav__list">
@@ -46,8 +46,10 @@
     </section>
     <section class="production-dates">
       <div class="wrapper">
-        <h2 class="production-dates__title">Сроки производства</h2>
+        <div class="production-dates__title-container">
+          <h2 class="production-dates__title">Сроки производства</h2>
         <p class="production-dates__subtitle">от 1 до 7 дней под ключ</p>
+        </div>
         <ul class="production-dates__list">
           <li class="production-dates__item">
             <img src="img/set-square.svg" alt="Замеры" class="production-dates__image">
@@ -66,8 +68,10 @@
     </section>
     <section class="calculate">
       <div class="wrapper">
-        <h2 class="calculate__title">Расчитать стоимость</h2>
-        <p class="calculate__subtitle">Ниже выберите изделие которое хотите расчитать</p>
+        <div class="calculate__title-container">
+          <h2 class="calculate__title">Расчитать стоимость</h2>
+          <p class="calculate__subtitle">Ниже выберите изделие которое хотите расчитать</p>
+        </div>
         <ul class="calculate__products-list products products__list">
           <li class="products__item products--active">
             <img src="img/stoleshnica.svg" alt="Столешница" class="products__image">
@@ -79,7 +83,7 @@
           </li>
           <li class="products__item">
             <img src="img/stavni.svg" alt="Ставни" class="products__image">
-            <p class="products__description">Оконные откосы</p>
+            <p class="products__description">Ок. откосы</p>
           </li>
           <li class="products__item">
             <img src="img/rakovina.svg" alt="Раковина" class="products__image">
@@ -87,14 +91,16 @@
           </li>
           <li class="products__item">
             <img src="img/resepshen.svg" alt="Ресепшн" class="products__image">
-            <p class="products__description">Стойка ресепшн</p>
+            <p class="products__description">Стойка рес-н</p>
           </li>
           <li class="products__item">
             <img src="img/bar.svg" alt="Барная стойка" class="products__image">
-            <p class="products__description">Барная стойка</p>
+            <p class="products__description">Бар-я стойка</p>
+          </li>
+          <li class="products__item">
+            <a href="#" class="calculate__callback-button callback-button">Не нашли подходящее?</a>
           </li>
         </ul>
-        <a href="#" class="calculate__callback-button callback-button">Не нашли подходящее?</a>
         <div class="calculate__edit-selected edit-selected">
           <div class="edit-selected__container">
             <div class="edit-selected__title-container">
@@ -168,9 +174,11 @@
               </ul>
             </li>
             <li class="edit-selected__item result">
-              <h5 class="result__title">Предварительный расчет</h5>
+              <div class="result__container">
+                <h5 class="result__title">Предварительный расчет</h5>
               <span class="result__sum">7400<sup>руб</sup></span>
               <p class="result__description">Указанная стоимость включает производство по Вашим размерам и предмонтажную полировку изделия. Более точный заказ Вы можете сделать с помощью менеджера.</p>
+              </div>
               <button class="result__callback-button button">Оформить с помощью менеджера</button>
             </li>
           </ul>
@@ -251,18 +259,24 @@
         <ul class="news__list">
           <li class="news__item">
             <img src="img/news-image.jpg" alt="Новостная картинка" class="news__item-image">
-            <h3 class="news__item-title">Изготовление столешниц из искусственного камня</h3>
-            <p class="news__item-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого вскоре, необходимыми предупреждал не над деревни знаках всемогущая, повстречался назад снова образ текстов семь гор. Рыбного образ дороге решила!</p>
+            <div class="news__text-container">
+              <h3 class="news__item-title">Изготовление столешниц из искусственного камня</h3>
+              <p class="news__item-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого вскоре, необходимыми предупреждал не над деревни знаках всемогущая, повстречался назад снова образ текстов семь гор. Рыбного образ дороге решила!</p>
+            </div>
           </li>
           <li class="news__item">
             <img src="img/news-image.jpg" alt="Новостная картинка" class="news__item-image">
-            <h3 class="news__item-title">Изготовление столешниц из искусственного камня</h3>
-            <p class="news__item-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого вскоре, необходимыми предупреждал не над деревни знаках всемогущая, повстречался назад снова образ текстов семь гор. Рыбного образ дороге решила!</p>
+            <div class="news__text-container">
+              <h3 class="news__item-title">Изготовление столешниц из искусственного камня</h3>
+              <p class="news__item-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого вскоре, необходимыми предупреждал не над деревни знаках всемогущая, повстречался назад снова образ текстов семь гор. Рыбного образ дороге решила!</p>
+            </div>
           </li>
           <li class="news__item">
             <img src="img/news-image.jpg" alt="Новостная картинка" class="news__item-image">
-            <h3 class="news__item-title">Изготовление столешниц из искусственного камня</h3>
-            <p class="news__item-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого вскоре, необходимыми предупреждал не над деревни знаках всемогущая, повстречался назад снова образ текстов семь гор. Рыбного образ дороге решила!</p>
+            <div class="news__text-container">
+              <h3 class="news__item-title">Изготовление столешниц из искусственного камня</h3>
+              <p class="news__item-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого вскоре, необходимыми предупреждал не над деревни знаках всемогущая, повстречался назад снова образ текстов семь гор. Рыбного образ дороге решила!</p>
+            </div>
           </li>
         </ul>
         <a href="#" class="news__button-more">Показать все статьи</a>
@@ -310,7 +324,8 @@
             </div>
           </div>
         </div>
-        <div class="footer-page__bottom order">
+      </div>
+      <div class="footer-page__bottom order">
           <ul class="order__list">
             <li class="order__item">
               <img src="img/u-shaped.svg" alt="П-образная столешница" class="order__image">
@@ -333,7 +348,6 @@
             </li>
           </ul>
         </div>
-      </div>
     </footer>
   </main>
 </body>

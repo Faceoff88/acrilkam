@@ -72,6 +72,7 @@
   }
 
   &__image {
+    width: 100%;
     border-radius: 25px;
     box-shadow: 0 3px 10px rgba(black, 0.4);
   }
@@ -119,6 +120,33 @@
 
       &::after {
         content: url("../img/long-arrow-orange.svg");
+      }
+    }
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .completed-work {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__item {
+      width: 280px;
+
+      &:nth-child(2) {
+        order: -1;
+      }
+    }
+
+    &__nav-item {
+      margin-bottom: 30px;
+
+      &:first-child {
+        margin-bottom: 40px;
       }
     }
   }
