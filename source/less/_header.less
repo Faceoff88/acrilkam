@@ -1,6 +1,8 @@
 .page-header {
   padding-top: 20px;
   padding-bottom: 20px;
+  position: relative;
+  z-index: 2;
 
   &__top {
     display: flex;
@@ -13,6 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
 
   &__phone {
@@ -22,7 +25,7 @@
 }
 
 .main-nav__button {
-  width: 20px;
+  width: 25px;
   height: 4px;
   background-color: @cream-color;
   border: none;
@@ -42,10 +45,10 @@
 
   &::after {
     content: "";
-    width: 30px;
+    width: 35px;
     height: 4px;
     position: absolute;
-    top: -8px;
+    top: -10px;
     right: 0;
     background-color: @cream-color;
     border-radius: 2px;
@@ -53,10 +56,10 @@
 
   &::before {
     content: "";
-    width: 30px;
+    width: 35px;
     height: 4px;
     position: absolute;
-    top: 8px;
+    top: 10px;
     right: 0;
     background-color: @cream-color;
     border-radius: 2px;
@@ -81,6 +84,18 @@
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    &__logo {
+      width: 150px;
+    }
+
+    &__logo-image {
+      width: 100%;
     }
   }
 }
