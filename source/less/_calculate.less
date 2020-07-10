@@ -192,7 +192,7 @@
       }
     }
 
-    .formfactor .step__number::before {
+    .sizes .step__number::before {
       content: "02";
     }
 
@@ -448,5 +448,54 @@
     &__description {
       max-width: 280px;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .calculate {
+    .products__item:last-child {
+      background-color: transparent;
+      flex-basis: 100%;
+
+      a {
+        color: @doublelight-grey-color;
+        align-self: start;
+
+        &:hover,
+        &:focus {
+          opacity: 0.7;
+        }
+
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .edit-selected {
+      &__list {
+        justify-content: space-between;
+        position: relative;
+      }
+    }
+  }
+
+  .formfactor {
+    .step__list {
+      max-width: 300px;
+    }
+  }
+
+  .materials {
+    &__list {
+      flex-direction: column;
+    }
+  }
+
+  .result {
+    position: absolute;
+    bottom: 50px;
+    width: 62%;
+    justify-content: space-between;
   }
 }

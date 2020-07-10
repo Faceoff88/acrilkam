@@ -151,3 +151,17 @@
     }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .completed-work {
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__item {
+      &:nth-child(3) {
+        order: -1;
+      }
+    }
+  }
+}

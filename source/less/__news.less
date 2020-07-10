@@ -1,6 +1,6 @@
 .news {
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
 
   &__title {
     max-width: 135px;
@@ -17,7 +17,7 @@
   }
 
   &__item {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     width: 100%;
 
     &-image {
@@ -90,6 +90,19 @@
 
     &__text-container {
       max-width: 60%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .news {
+    &__item {
+      width: 30%;
+      flex-direction: column;
+    }
+
+    &__text-container {
+      max-width: 100%;
     }
   }
 }

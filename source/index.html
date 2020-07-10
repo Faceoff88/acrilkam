@@ -13,7 +13,7 @@
         <a class="page-header__logo logo">
           <img src="img/logo.svg" alt="Логотип сайта" class="page-header__logo-image logo__image">
         </a>
-        <nav class="page-header__nav main-nav visually-hidden">
+        <nav class="page-header__nav main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="#" class="main-nav__link">О нас</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Наши работы</a></li>
@@ -21,11 +21,12 @@
             <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Ремонт</a></li>
           </ul>
-          <button class="main-nav__close" value="закрыть меню">закрыть меню</button>
+          <button class="main-nav__close" value="закрыть меню"></button>
         </nav>
-        <button class="main-nav__button toggle-button" value="открыть меню"></button>
+        <button class="main-nav__button" value="открыть меню"></button>
       </div>
       <div class="page-header__bottom">
+        <button class="page-header__callback-button">Оставить заявку</button>
         <ul class="page-header__social-icons social-icons social-icons__list">
           <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/instagram.svg" alt="Инстаграм" class="social-icons__image"></a></li>
           <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/telegram.svg" alt="Телеграм" class="social-icons__image"></a></li>
@@ -110,7 +111,7 @@
             <button class="edit-selected__next-button">Подоконники</button>
           </div>
           <ul class="edit-selected__list">
-            <li class="edit-selected__item step step--one">
+            <li class="edit-selected__item step formfactor">
               <span class="step__number">01</span>
               <p class="step__title">Выберите форму</p>
               <ul class="step__list">
@@ -128,7 +129,7 @@
                 </li>
               </ul>
             </li>
-            <li class="edit-selected__item step formfactor">
+            <li class="edit-selected__item step sizes">
               <span class="step__number">02</span>
               <p class="step__title">Укажите размеры</p>
               <div class="step__input-sizes input-sizes">
@@ -305,7 +306,7 @@
             </li>
           </ul>
           <div class="footer-page__nav-container">
-            <nav class="footer-page__nav nav visually-hidden">
+            <nav class="footer-page__nav nav">
               <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Наши работы</a></li>
@@ -350,5 +351,6 @@
         </div>
     </footer>
   </main>
+  <script src="js/main.js"></script>
 </body>
 </html>

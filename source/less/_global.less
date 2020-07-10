@@ -104,6 +104,10 @@ h3 {
   text-transform: uppercase;
 }
 
+button {
+  cursor: pointer;
+}
+
 .button {
   width: 280px;
   height: 60px;
@@ -124,5 +128,11 @@ h3 {
   &:active {
     box-shadow: none;
     background: @dark-grey-color;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrapper {
+    max-width: 1060px;
   }
 }
