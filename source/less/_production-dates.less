@@ -125,3 +125,25 @@
     }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .production-dates {
+    &__item {
+      &:nth-child(2n) {
+        flex-direction: column;
+
+        &::after {
+          left: 245%;
+          top: 50%;
+          transform: rotate(-45deg) translateY(-50%);
+        }
+
+        &::before {
+          left: -160%;
+          bottom: 50%;
+          transform: rotate(225deg) translateY(-80%);
+        }
+      }
+    }
+  }
+}

@@ -91,3 +91,44 @@
     }
   }
 }
+
+@media (min-width: @tablet-width) {
+  .slogan {
+    margin-top: -160px;
+
+    .wrapper {
+      max-width: 1060px;
+
+      &::before {
+        width: 370px;
+        height: 652px;
+      }
+    }
+
+    &__text {
+      max-width: 400px;
+      margin-top: 250px;
+
+      span {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+    &__title {
+      max-width: 900px;
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 60px;
+    }
+
+    &__button {
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: @cream-color;
+        box-shadow: none;
+      }
+    }
+  }
+}
