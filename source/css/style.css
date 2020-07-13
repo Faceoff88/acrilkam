@@ -1018,6 +1018,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 .calculate .products__item:last-child {
   line-height: 30px;
@@ -1042,6 +1043,10 @@ button {
 }
 .calculate .products--active {
   background-color: #2b2b2b;
+}
+.calculate .products--active p {
+  color: #f7e3c6;
+  text-decoration: underline;
 }
 .calculate__callback-button {
   display: inline-block;
@@ -1182,6 +1187,7 @@ button {
   background-color: #2b2b2b;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 .calculate .edit-selected .step__item:hover,
 .calculate .edit-selected .step__item:focus,
@@ -1220,6 +1226,10 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 10px;
+}
+.input-sizes__image {
+  max-width: 100%;
   margin-right: 10px;
 }
 .input-sizes .input-side-name {
@@ -1291,6 +1301,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .materials__title {
   font-size: 24px;
