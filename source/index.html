@@ -73,6 +73,8 @@
           <h2 class="calculate__title">Расчитать стоимость</h2>
           <p class="calculate__subtitle">Ниже выберите изделие которое хотите расчитать</p>
         </div>
+        <div class="price-one-metr-acril visually-hidden" style="display: none;">14000</div>
+        <div class="price-one-metr-kvarz visually-hidden" style="display: none;">18000</div>
         <ul class="calculate__products-list products products__list">
           <li class="products__item products--active" value="">
             <img src="img/stoleshnica.svg" alt="Столешница" class="products__image">
@@ -115,7 +117,7 @@
               <span class="step__number">01</span>
               <p class="step__title">Выберите форму</p>
               <ul class="step__list">
-                <li class="step__item">
+                <li class="step__item step__item--active">
                   <img src="img/straight.svg" alt="Прямая столешница" class="step__form-image" data-formfactor="straight-sizes">
                 </li>
                 <li class="step__item">
@@ -139,15 +141,15 @@
                 <ul class="input-sizes__list">
                   <li class="input-sizes__item">
                     <p class="input-side-name">a</p>
-                    <input type="text" class="input-side-a" placeholder="Размер, мм">
+                    <input type="text" class="input-side-a" placeholder="Размер, см" value="" maxlength="4">
                   </li>
                   <li class="input-sizes__item">
                     <p class="input-side-name">b</p>
-                    <input type="text" class="input-side-b" placeholder="Размер, мм">
+                    <input type="text" class="input-side-b" placeholder="Размер, см" value="" maxlength="4">
                   </li>
-                  <li class="input-sizes__item">
+                  <li class="input-sizes__item input-sizes__item--disabled">
                     <p class="input-side-name">c</p>
-                    <input type="text" class="input-side-c" placeholder="Размер, мм">
+                    <input type="text" class="input-side-c" placeholder="Размер, см" value="" maxlength="4" disabled>
                   </li>
                 </ul>
               </div>
@@ -156,28 +158,30 @@
               <span class="step__number">03</span>
               <p class="step__title">Выберите материал</p>
               <ul class="edit-selected__materials materials__list">
-                <li class="materials__item">
+                <li class="materials__item materials__item--active" value="14000">
                   <h5 class="materials__title">Акрил</h5>
                   <ul class="materials__description-list">
                     <li class="description-list__item">Дешевле</li>
                     <li class="description-list__item">Полируется</li>
                     <li class="description-list__item">Без швов</li>
                   </ul>
+                  <div class="wind"></div>
                 </li>
-                <li class="materials__item">
+                <li class="materials__item" value="18000">
                   <h5 class="materials__title">Кварц</h5>
                   <ul class="materials__description-list">
                     <li class="description-list__item">Дороже</li>
                     <li class="description-list__item">Не царапается</li>
                     <li class="description-list__item">Шов 1 - 2 мм</li>
                   </ul>
+                  <div class="wind"></div>
                 </li>
               </ul>
             </li>
             <li class="edit-selected__item result">
               <div class="result__container">
                 <h5 class="result__title">Предварительный расчет</h5>
-              <span class="result__sum">7400<sup>руб</sup></span>
+              <span class="result__sum">0<sup>руб</sup></span>
               <p class="result__description">Указанная стоимость включает производство по Вашим размерам и предмонтажную полировку изделия. Более точный заказ Вы можете сделать с помощью менеджера.</p>
               </div>
               <button class="result__callback-button button">Оформить с помощью менеджера</button>

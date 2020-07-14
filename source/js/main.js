@@ -103,19 +103,95 @@ var formFactor = document.querySelector('.formfactor');
 var formFactorList = formFactor.querySelector('.step__list');
 var formFactorItem = formFactorList.querySelectorAll('.step__item');
 var sizesImage = document.querySelector('.input-sizes__image');
-
+var elemInputSizeC = document.querySelector('.input-sizes__item:last-child');
+var setStraight = true;
+var setLshaped = false;
+var setUshaped = false;
 
 var changeFormfactor = function (evt) {
   evt.preventDefault();
   var target = evt.target;
-
   for (var i = 0; i < formFactorItem.length; i++) {
-    if (target.className == 'step__form-image') {
-      console.log(target);
-      sizesImage.src = 'img/' + target.dataset.formfactor + '.svg';
+    formFactorItem[i].classList.remove('step__item--active');
+  }
+  if (target.className == 'step__form-image') {
+    sizesImage.src = 'img/' + target.dataset.formfactor + '.svg';
+    target.parentNode.classList.add('step__item--active');
+    elemInputSizeC.classList.remove('input-sizes__item--disabled');
+    inputSizeC.removeAttribute('disabled', true);
+
+    if (target.dataset.formfactor == 'straight-sizes') {
+      setStraight = true;
+      setLshaped = false;
+      setUshaped = false;
+      elemInputSizeC.classList.add('input-sizes__item--disabled');
+      inputSizeC.setAttribute('disabled', true);
+    } else if (target.dataset.formfactor == 'l-shaped') {
+      setLshaped = true;
+      setStraight = false;
+      setUshaped = false;
+    } else if (target.dataset.formfactor == 'u-shaped-white') {
+      setUshaped = true;
+      setStraight = false;
+      setLshaped = false;
     }
   }
-}
+};
 
 formFactorList.addEventListener('click', changeFormfactor);
+
+var inputSizeList = document.querySelector('.input-sizes__list');
+var inputSizeA = document.querySelector('.input-side-a');
+var inputSizeB = document.querySelector('.input-side-b');
+var inputSizeC = document.querySelector('.input-side-c');
+var fullSpaceProductsInMetr = 0;
+
+
+var onInputSizes = function (evt) {
+  evt.preventDefault();
+  var target = evt.target;
+  if (target.tagName == "INPUT") {
+    var re = /^[0-9]*$/;
+
+    for (var i = 0; i < target.value.length; i++) {
+      if (!re.test(target.value[i])) {
+        target.value = "";
+      }
+    }
+  }
+
+  if (setStraight) {
+    fullSpaceProductsInMetr = (parseFloat(inputSizeA.value) * parseFloat(inputSizeB.value)) / 10000;
+  } else if (setLshaped) {
+    fullSpaceProductsInMetr = ((parseFloat(inputSizeA.value) * parseFloat(inputSizeB.value)) + (parseFloat(inputSizeA.value) * parseFloat(inputSizeC.value))) / 10000;
+  } else if (setUshaped) {
+    fullSpaceProductsInMetr = (((parseFloat(inputSizeA.value) * parseFloat(inputSizeB.value)) * 2) + (parseFloat(inputSizeA.value) * parseFloat(inputSizeC.value))) / 10000;
+  }
+
+  return fullSpaceProductsInMetr;
+};
+
+inputSizeList.addEventListener('input', onInputSizes);
+
+var materialsList = document.querySelector('.materials__list');
+var materialsItem = materialsList.querySelectorAll('.materials__item');
+
+var onChangeMaterial = function (evt) {
+
+  var target = evt.target.parentNode;
+  for (var i = 0; i < materialsItem.length; i++) {
+    materialsItem[i].classList.remove('materials__item--active');
+  }
+  if (target.className == 'materials__item') {
+    target.classList.add('materials__item--active');
+  }
+  var priceOfMetr = materialsList.querySelector('.materials__item--active').value;
+  var resultSum = document.querySelector('.result__sum');
+  var result = fullSpaceProductsInMetr * priceOfMetr;
+
+  resultSum.innerHTML = result + '<sup>руб</sup>';
+};
+
+materialsList.addEventListener('click', onChangeMaterial);
+
 
