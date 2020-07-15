@@ -214,6 +214,11 @@
   }
 }
 
+.formfactor--disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
 .input-sizes {
   display: flex;
 
@@ -266,6 +271,11 @@
       background-color: #dfdfdf;
     }
   }
+}
+
+.sizes--disabled {
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .materials {
@@ -338,6 +348,11 @@
       margin-top: 2px;
     }
   }
+
+  &--disabled {
+    opacity: 0.7;
+    pointer-events: none;
+  }
 }
 
 .materials__item--active .description-list__item {
@@ -400,6 +415,7 @@
     font-size: 12px;
     text-transform: none;
     border-color: @cream-color;
+    border-radius: 15px;
   }
 }
 

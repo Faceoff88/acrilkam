@@ -28,12 +28,22 @@ var editSelectedSubtitle = document.querySelector('.edit-selected__subtitle');
 var editSelectedNextButton = document.querySelector('.edit-selected__next-button');
 var productSerialNumber;
 var wasClickedProductsList = false;
+var footerOrder = document.querySelector('.order');
+var footerOrderImage = footerOrder.querySelector('.order__image');
+var footerOrderName = footerOrder.querySelector('.order__name');
+var footerOrderSize = footerOrder.querySelector('.order__size>span:nth-child(2)');
+var footerOrderResult = footerOrder.querySelector('.order__preliminary>p:nth-child(2)');
+var sizes = document.querySelector('.sizes');
+var materials = document.querySelector('.materials');
+var formFactor = document.querySelector('.formfactor');
+var activeProduct;
 
 var placeSerialNum = function () {
   for (var i = 0; i < productsItem.length; i++) {
     productsItem[i].dataset.serialNum = i;
   }
-}
+};
+
 placeSerialNum();
 
 var getSerialNum = function () {
@@ -64,11 +74,24 @@ var onChangeProduct = function (evt) {
       var nextSelectedProductName = productsItem[num].querySelector('.products__description');
       editSelectedNextButton.innerText = nextSelectedProductName.innerText;
       editSelectedSubtitle.innerText = selectedProductName.innerText;
+      footerOrderName.innerText = selectedProductName.innerText;
+      footerOrder.classList.add('order--active');
+
     }
   }
   getSerialNum();
-
   getClickedNexNumber();
+
+  activeProduct = productsList.querySelector('.products--active');
+  if (activeProduct.dataset.serialNum == 3) {
+    formFactor.classList.add('formfactor--disabled');
+    sizes.classList.add('formfactor--disabled');
+    materials.classList.remove('materials--disabled');
+  } else {
+    sizes.classList.remove('formfactor--disabled');
+    formFactor.classList.remove('formfactor--disabled');
+    materials.classList.add('materials--disabled');
+  }
 };
 
 
@@ -93,20 +116,33 @@ var onClickNextButton = function (evt) {
   var activeProduct = productsList.querySelector('.products--active');
   editSelectedSubtitle.innerText = activeProduct.querySelector('.products__description').innerText;
   editSelectedNextButton.innerText = productsItem[nexNumber].querySelector('.products__description').innerText;
+  footerOrderName.innerText = activeProduct.querySelector('.products__description').innerText;
 };
 
 editSelectedNextButton.addEventListener('click', onClickNextButton);
 productsList.addEventListener('click', onChangeProduct);
 
-
-var formFactor = document.querySelector('.formfactor');
 var formFactorList = formFactor.querySelector('.step__list');
 var formFactorItem = formFactorList.querySelectorAll('.step__item');
 var sizesImage = document.querySelector('.input-sizes__image');
 var elemInputSizeC = document.querySelector('.input-sizes__item:last-child');
+var elemInputSizeB = document.querySelector('.input-sizes__item:nth-child(2)');
+var elemInputSizeA = document.querySelector('.input-sizes__item:first-child');
 var setStraight = true;
 var setLshaped = false;
 var setUshaped = false;
+
+var getFullSpaceProductsInMetr = function () {
+  if (setStraight) {
+    fullSpaceProductsInMetr = (parseFloat(inputSizeA.value) * parseFloat(inputSizeB.value)) / 10000;
+  } else if (setLshaped) {
+    fullSpaceProductsInMetr = ((parseFloat(inputSizeA.value) * parseFloat(inputSizeB.value)) + (parseFloat(inputSizeA.value) * parseFloat(inputSizeC.value))) / 10000;
+  } else if (setUshaped) {
+    fullSpaceProductsInMetr = (((parseFloat(inputSizeA.value) * parseFloat(inputSizeB.value)) * 2) + (parseFloat(inputSizeA.value) * parseFloat(inputSizeC.value))) / 10000;
+  }
+
+  return fullSpaceProductsInMetr;
+};
 
 var changeFormfactor = function (evt) {
   evt.preventDefault();
@@ -116,9 +152,17 @@ var changeFormfactor = function (evt) {
   }
   if (target.className == 'step__form-image') {
     sizesImage.src = 'img/' + target.dataset.formfactor + '.svg';
+    footerOrderImage.src = 'img/' + target.dataset.formfactor + '.svg';
     target.parentNode.classList.add('step__item--active');
     elemInputSizeC.classList.remove('input-sizes__item--disabled');
+    elemInputSizeB.classList.remove('input-sizes__item--disabled');
+    elemInputSizeA.classList.remove('input-sizes__item--disabled');
     inputSizeC.removeAttribute('disabled', true);
+    inputSizeB.removeAttribute('disabled', true);
+    inputSizeA.removeAttribute('disabled', true);
+    sizes.classList.remove('sizes--disabled');
+    footerOrder.classList.add('order--active');
+
 
     if (target.dataset.formfactor == 'straight-sizes') {
       setStraight = true;
@@ -136,6 +180,8 @@ var changeFormfactor = function (evt) {
       setLshaped = false;
     }
   }
+  getFullSpaceProductsInMetr();
+
 };
 
 formFactorList.addEventListener('click', changeFormfactor);
@@ -161,14 +207,12 @@ var onInputSizes = function (evt) {
   }
 
   if (setStraight) {
-    fullSpaceProductsInMetr = (parseFloat(inputSizeA.value) * parseFloat(inputSizeB.value)) / 10000;
-  } else if (setLshaped) {
-    fullSpaceProductsInMetr = ((parseFloat(inputSizeA.value) * parseFloat(inputSizeB.value)) + (parseFloat(inputSizeA.value) * parseFloat(inputSizeC.value))) / 10000;
-  } else if (setUshaped) {
-    fullSpaceProductsInMetr = (((parseFloat(inputSizeA.value) * parseFloat(inputSizeB.value)) * 2) + (parseFloat(inputSizeA.value) * parseFloat(inputSizeC.value))) / 10000;
+    footerOrderSize.innerHTML = inputSizeA.value + ' X ' + inputSizeB.value + ' см';
+  } else {
+    footerOrderSize.innerHTML = inputSizeA.value + ' X ' + inputSizeB.value + ' X ' + inputSizeC.value + ' см';
   }
-
-  return fullSpaceProductsInMetr;
+  getFullSpaceProductsInMetr();
+  materials.classList.remove('materials--disabled');
 };
 
 inputSizeList.addEventListener('input', onInputSizes);
@@ -188,8 +232,18 @@ var onChangeMaterial = function (evt) {
   var priceOfMetr = materialsList.querySelector('.materials__item--active').value;
   var resultSum = document.querySelector('.result__sum');
   var result = fullSpaceProductsInMetr * priceOfMetr;
-
-  resultSum.innerHTML = result + '<sup>руб</sup>';
+  footerOrder.classList.add('order--active');
+  activeProduct = productsList.querySelector('.products--active');
+  if (isNaN(result)) {
+    resultSum.innerHTML = '0' + '<sup>руб</sup>';
+    footerOrderResult.innerHTML = '0' + '<sup>руб</sup>';
+  } else if (activeProduct.dataset.serialNum == 3) {
+    resultSum.innerHTML = 'от ' + (priceOfMetr - 10000) + '<sup>руб</sup>';
+    footerOrderResult.innerHTML = 'от ' + (priceOfMetr - 10000) + '<sup>руб</sup>';
+  } else {
+    resultSum.innerHTML = result + '<sup>руб</sup>';
+    footerOrderResult.innerHTML = result + '<sup>руб</sup>';
+  }
 };
 
 materialsList.addEventListener('click', onChangeMaterial);

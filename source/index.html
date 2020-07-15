@@ -113,11 +113,11 @@
             <button class="edit-selected__next-button">Подоконник</button>
           </div>
           <ul class="edit-selected__list">
-            <li class="edit-selected__item step formfactor">
+            <li class="edit-selected__item step formfactor formfactor">
               <span class="step__number">01</span>
               <p class="step__title">Выберите форму</p>
               <ul class="step__list">
-                <li class="step__item step__item--active">
+                <li class="step__item">
                   <img src="img/straight.svg" alt="Прямая столешница" class="step__form-image" data-formfactor="straight-sizes">
                 </li>
                 <li class="step__item">
@@ -131,21 +131,21 @@
                 </li>
               </ul>
             </li>
-            <li class="edit-selected__item step sizes">
+            <li class="edit-selected__item step sizes sizes--disabled">
               <span class="step__number">02</span>
               <p class="step__title">Укажите размеры</p>
               <div class="step__input-sizes input-sizes">
                 <div class="input-sizes__image-container">
-                  <img src="img/u-shaped-white.svg" alt="П-образная столешница" class="input-sizes__image">
+                  <img src="img/close.svg" alt="П-образная столешница" class="input-sizes__image">
                 </div>
                 <ul class="input-sizes__list">
-                  <li class="input-sizes__item">
+                  <li class="input-sizes__item input-sizes__item--disabled">
                     <p class="input-side-name">a</p>
-                    <input type="text" class="input-side-a" placeholder="Размер, см" value="" maxlength="4">
+                    <input type="text" class="input-side-a" placeholder="Размер, см" value="" maxlength="4" disabled>
                   </li>
-                  <li class="input-sizes__item">
+                  <li class="input-sizes__item input-sizes__item--disabled">
                     <p class="input-side-name">b</p>
-                    <input type="text" class="input-side-b" placeholder="Размер, см" value="" maxlength="4">
+                    <input type="text" class="input-side-b" placeholder="Размер, см" value="" maxlength="4" disabled>
                   </li>
                   <li class="input-sizes__item input-sizes__item--disabled">
                     <p class="input-side-name">c</p>
@@ -154,11 +154,11 @@
                 </ul>
               </div>
             </li>
-            <li class="edit-selected__item step materials">
+            <li class="edit-selected__item step materials materials--disabled">
               <span class="step__number">03</span>
               <p class="step__title">Выберите материал</p>
               <ul class="edit-selected__materials materials__list">
-                <li class="materials__item materials__item--active" value="14000">
+                <li class="materials__item" value="14000">
                   <h5 class="materials__title">Акрил</h5>
                   <ul class="materials__description-list">
                     <li class="description-list__item">Дешевле</li>
@@ -333,19 +333,19 @@
       <div class="footer-page__bottom order">
           <ul class="order__list">
             <li class="order__item">
-              <img src="img/u-shaped.svg" alt="П-образная столешница" class="order__image">
+              <img src="img/straight-sizes.svg" alt="П-образная столешница" class="order__image">
             </li>
             <li class="order__item">
               <div class="order__name-and-size">
                 <p class="order__name">Столешница</p>
                 <p class="order__size">
                   <span>Размер</span>
-                  <span>2000 X 300 X 600 мм</span>
+                  <span>--- X --- X --- см</span>
                 </p>
               </div>
               <div class="order__preliminary">
                 <p>Предварительный расчёт</p>
-                <p>7400<sup>руб</sup></p>
+                <p>0<sup>руб</sup></p>
               </div>
             </li>
             <li class="footer-page__order-item">
