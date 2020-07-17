@@ -249,3 +249,33 @@ var onChangeMaterial = function (evt) {
 materialsList.addEventListener('click', onChangeMaterial);
 
 
+// FORM //
+
+var feedBack = document.querySelector('.feedback');
+var feedBackForm = document.querySelector('.feedback>.wrapper');
+var callFormButtons = document.querySelectorAll('.form-button');
+var feedbackClose = feedBack.querySelector('.feedback__close');
+
+var onClickCallFormBtn = function (evt) {
+  evt.preventDefault();
+
+  feedBack.classList.add('feedback--open');
+  setTimeout(function () {
+    feedBackForm.style.top = '50%';
+  }, 300);
+
+  feedbackClose.addEventListener('click', onCloseForm);
+};
+
+for (var i = 0; i < callFormButtons.length; i++) {
+  callFormButtons[i].addEventListener('click', onClickCallFormBtn);
+}
+
+var onCloseForm = function (evt) {
+  evt.preventDefault();
+
+  feedBack.classList.remove('feedback--open');
+  feedBackForm.style.top = '-100%';
+
+  feedbackClose.removeEventListener('click', onCloseForm);
+}
