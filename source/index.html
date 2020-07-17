@@ -26,7 +26,7 @@
         <button class="main-nav__button" value="открыть меню"></button>
       </div>
       <div class="page-header__bottom">
-        <button class="page-header__callback-button">Оставить заявку</button>
+        <button class="page-header__callback-button form-button">Оставить заявку</button>
         <ul class="page-header__social-icons social-icons social-icons__list">
           <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/instagram.svg" alt="Инстаграм" class="social-icons__image"></a></li>
           <li class="social-icons__item"><a href="#" class="social-icons__link"><img src="img/telegram.svg" alt="Телеграм" class="social-icons__image"></a></li>
@@ -42,7 +42,7 @@
       <div class="wrapper">
         <p class="slogan__text"><span>Производим и монтируем стойки, столешницы, подоконники, раковины и другое</span></p>
         <h2 class="slogan__title">Изделия из искуственного камня и кварца</h2>
-        <button class="slogan__button button">Расчитать стоимость</button>
+        <a href="#calc" class="slogan__button button">Расчитать стоимость</a>
       </div>
     </section>
     <section class="production-dates">
@@ -67,7 +67,7 @@
         </ul>
       </div>
     </section>
-    <section class="calculate">
+    <section class="calculate" id="calc">
       <div class="wrapper">
         <div class="calculate__title-container">
           <h2 class="calculate__title">Расчитать стоимость</h2>
@@ -101,7 +101,7 @@
             <p class="products__description">Бар-я стойка</p>
           </li>
           <li class="products__item">
-            <a href="#" class="calculate__callback-button callback-button">Не нашли подходящее?</a>
+            <a href="#" class="calculate__callback-button callback-button form-button">Не нашли подходящее?</a>
           </li>
         </ul>
         <div class="calculate__edit-selected edit-selected">
@@ -127,7 +127,7 @@
                   <img src="img/u-shaped.svg" alt="П-образная столешница" class="step__form-image" data-formfactor="u-shaped-white">
                 </li>
                 <li class="step__item">
-                  <a href="#" class="step__callback-button callback-button">Не нашли?</a>
+                  <a href="#" class="step__callback-button form-button callback-button form-button">Не нашли?</a>
                 </li>
               </ul>
             </li>
@@ -184,7 +184,7 @@
               <span class="result__sum">0<sup>руб</sup></span>
               <p class="result__description">Указанная стоимость включает производство по Вашим размерам и предмонтажную полировку изделия. Более точный заказ Вы можете сделать с помощью менеджера.</p>
               </div>
-              <button class="result__callback-button button">Оформить с помощью менеджера</button>
+              <button class="result__callback-button button form-button">Оформить с помощью менеджера</button>
             </li>
           </ul>
         </div>
@@ -287,6 +287,7 @@
         <a href="#" class="news__button-more">Показать все статьи</a>
       </div>
     </section>
+  </main>
     <footer class="footer-page">
       <div class="wrapper">
         <div class="footer-page__top">
@@ -349,12 +350,35 @@
               </div>
             </li>
             <li class="footer-page__order-item">
-              <button class="footer-page__button-resume button">Продолжить оформление заказа</button>
+              <button class="footer-page__button-resume button form-button">Продолжить оформление заказа</button>
             </li>
           </ul>
         </div>
     </footer>
-  </main>
+    <section class="feedback">
+      <div class="wrapper">
+        <h2 class="feedback__title">Форма заявки</h2>
+        <form action="https://echo.htmlacademy.ru" method="post" class="feedback__form">
+          <ul class="feedback__list">
+            <li class="feedback__item">
+              <input type="text" class="feedback__field" placeholder="Введите Ваше имя" maxlength="20" required>
+            </li>
+            <li class="feedback__item">
+              <input type="text" class="feedback__field" placeholder="Введите Ваш телефон" maxlength="11" required>
+            </li>
+            <li class="feedback__item">
+              <textarea name="comment" rows="10" class="feedback__field" placeholder="Комментарии"></textarea>
+            </li>
+            <li class="feedback-checkbox">
+              <input type="checkbox" class="feedback__field" name="rule" required>
+              <label for="rule">Оставляя свои контактные данные вы соглашаетесь на обработку персональных данных в соответствии с Правовой информацией.</label>
+            </li>
+          </ul>
+          <button class="button feedback__button" id="feedbackSend" type="submit">Отправить</button>
+          <button class="feedback__close" type="button"></button>
+        </form>
+      </div>
+    </section>
   <script src="js/main.js"></script>
 </body>
 </html>
