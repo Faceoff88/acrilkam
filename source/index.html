@@ -15,7 +15,7 @@
         </a>
         <nav class="page-header__nav main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="#" class="main-nav__link">О нас</a></li>
+            <li class="main-nav__item"><a href="about.html" class="main-nav__link">О нас</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Наши работы</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Материал</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
@@ -53,15 +53,30 @@
         </div>
         <ul class="production-dates__list">
           <li class="production-dates__item">
-            <img src="img/set-square.svg" alt="Замеры" class="production-dates__image">
+            <picture class="production-dates__image-block">
+              <source media="(min-resolution: 2dppx)" srcset="img/set-square@2x.svg">
+              <source media="(min-resolution:192dpi)" srcset="img/set-square@2x.svg">
+              <source media="(-webkit-min-device-pixel-ratio: 2)" srcset="img/set-square@2x.svg">
+              <img src="img/set-square.svg" alt="Замеры" class="production-dates__image">
+            </picture>
             <p class="production-dates__description">Замеры</p>
           </li>
           <li class="production-dates__item">
-            <img src="img/hand.svg" alt="Производство" class="production-dates__image">
+            <picture class="production-dates__image-block">
+              <source media="(min-resolution: 2dppx)" srcset="img/hand@2x.svg">
+              <source media="(min-resolution:192dpi)" srcset="img/hand@2x.svg">
+              <source media="(-webkit-min-device-pixel-ratio: 2)" srcset="img/hand@2x.svg">
+              <img src="img/hand.svg" alt="Замеры" class="production-dates__image">
+            </picture>
             <p class="production-dates__description">Производство</p>
           </li>
           <li class="production-dates__item">
-            <img src="img/puzzle.svg" alt="Монтаж" class="production-dates__image">
+            <picture class="production-dates__image-block">
+              <source media="(min-resolution: 2dppx)" srcset="img/puzzle@2x.svg">
+              <source media="(min-resolution:192dpi)" srcset="img/puzzle@2x.svg">
+              <source media="(-webkit-min-device-pixel-ratio: 2)" srcset="img/puzzle@2x.svg">
+              <img src="img/puzzle.svg" alt="Замеры" class="production-dates__image">
+            </picture>
             <p class="production-dates__description">Монтаж</p>
           </li>
         </ul>
