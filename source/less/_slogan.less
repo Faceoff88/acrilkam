@@ -1,6 +1,6 @@
 .slogan {
   margin-top: -124px;
-  background-image: url("../img/slogan-bg.jpg");
+  background-image: url("../img/slogan-another-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -13,7 +13,11 @@
     transform: translateY(-60%);
 
     &::before {
-      content: url("../img/slogan-bg-image.jpg");
+      content: "";
+      background-image: url("../img/slogan-another-image.jpg");
+      background-size: contain;
+      width: 210px;
+      height: 370px;
       position: absolute;
       top: 145px;
       right: 0;
@@ -50,16 +54,18 @@
   }
 }
 
-@media (min-resolution: 1.5dppx) {
+@media only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
   .slogan {
-    background-image: url("../img/slogan-bg@2x.jpg");
+    background-image: url("../img/slogan-another-bg@3x.jpg");
   }
 }
 
 @media (min-width: @tablet-width) {
   .slogan {
     margin-top: -133px;
-    background-image: url("../img/slogan-bg-tablet.jpg");
+    background-image: url("../img/slogan-another-bg@3x.jpg");
+    background-size: cover;
     background-color: @dark-grey-color;
     height: auto;
 
@@ -72,7 +78,7 @@
         content: "";
         width: 210px;
         height: 370px;
-        background-image: url("../img/slogan-bg-image.png");
+        background-image: url("../img/slogan-another-image.jpg");
         background-size: cover;
         position: absolute;
         top: 200px;

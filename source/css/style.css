@@ -717,9 +717,12 @@ button {
     display: none;
   }
 }
+.about .page-header {
+  background-color: #2b2b2b;
+}
 .slogan {
   margin-top: -124px;
-  background-image: url("../img/slogan-bg.jpg");
+  background-image: url("../img/slogan-another-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -733,7 +736,11 @@ button {
           transform: translateY(-60%);
 }
 .slogan .wrapper::before {
-  content: url("../img/slogan-bg-image.jpg");
+  content: "";
+  background-image: url("../img/slogan-another-image.jpg");
+  background-size: contain;
+  width: 210px;
+  height: 370px;
   position: absolute;
   top: 145px;
   right: 0;
@@ -764,15 +771,16 @@ button {
   text-align: center;
   line-height: 3.7;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .slogan {
-    background-image: url("../img/slogan-bg@2x.jpg");
+    background-image: url("../img/slogan-another-bg@3x.jpg");
   }
 }
 @media (min-width: 660px) {
   .slogan {
     margin-top: -133px;
-    background-image: url("../img/slogan-bg-tablet.jpg");
+    background-image: url("../img/slogan-another-bg@3x.jpg");
+    background-size: cover;
     background-color: #2b2b2b;
     height: auto;
   }
@@ -786,7 +794,7 @@ button {
     content: "";
     width: 210px;
     height: 370px;
-    background-image: url("../img/slogan-bg-image.png");
+    background-image: url("../img/slogan-another-image.jpg");
     background-size: cover;
     position: absolute;
     top: 200px;
@@ -917,6 +925,10 @@ button {
 .production-dates__item:nth-child(2n) p {
   margin-left: 0;
   margin-right: 15%;
+}
+.production-dates__image {
+  max-width: 100%;
+  width: 100px;
 }
 @media (min-width: 660px) {
   .production-dates__title-container {
@@ -2339,6 +2351,100 @@ button {
   .feedback .feedback-checkbox label {
     max-width: 220px;
   }
+}
+.about-page__title {
+  text-align: center;
+  font-size: 14px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  color: #323232;
+}
+.about-page__title::before {
+  content: "";
+  width: calc(100% - 40px);
+  height: 2px;
+  background-color: #d47d42;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.about-page .about-us {
+  margin-bottom: 50px;
+}
+.about-page .about-us__title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 30px;
+}
+.about-page .about-us__title {
+  color: #d47d42;
+}
+.about-page .about-us__subtitle {
+  color: #a0a0a0;
+}
+.about-page .why__title {
+  text-align: center;
+  color: #d47d42;
+  margin-bottom: 30px;
+}
+.about-page .why__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about-page .why__item {
+  background-color: #414141;
+  width: 280px;
+  height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+.about-page .why__item-image {
+  fill: #d47d42;
+}
+.about-page .why__item-title {
+  color: #f7e3c6;
+  margin-top: 30px;
+}
+.about-page .why__item-text {
+  text-align: center;
+  margin-top: 20px;
+  line-height: 24px;
+  color: #ececec;
 }
 
 /*# sourceMappingURL=style.css.map */
