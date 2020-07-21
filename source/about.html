@@ -17,8 +17,8 @@
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link">О нас</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Наши работы</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Материал</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
+            <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Материал</a></li>
+            <li class="main-nav__item"><a href="contacts.html" class="main-nav__link">Контакты</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Ремонт</a></li>
           </ul>
           <button class="main-nav__close" value="закрыть меню"></button>
@@ -131,134 +131,14 @@
             <p class="why__item-text">Благодаря собственному производству и большому количеству заказов.</p>
           </li>
         </ul>
-        <div class="why__instagram-container">
-          <h3 class="why__instagram-title">Подпишись на наш Инстаграм!</h2>
-          <a href="#" class="why__instagram-link">@acrilkam</a>
-        </div>
       </div>
     </section>
-    <section class="calculate" id="calc">
-      <div class="wrapper">
-        <div class="calculate__title-container">
-          <h2 class="calculate__title">Расчитать стоимость</h2>
-          <p class="calculate__subtitle">Ниже выберите изделие которое хотите расчитать</p>
-        </div>
-        <div class="price-one-metr-acril visually-hidden" style="display: none;">14000</div>
-        <div class="price-one-metr-kvarz visually-hidden" style="display: none;">18000</div>
-        <ul class="calculate__products-list products products__list">
-          <li class="products__item products--active" value="">
-            <img src="img/stoleshnica.svg" alt="Столешница" class="products__image">
-            <p class="products__description">Столешница</p>
-          </li>
-          <li class="products__item">
-            <img src="img/podokonnik.svg" alt="Подоконник" class="products__image">
-            <p class="products__description">Подоконник</p>
-          </li>
-          <li class="products__item">
-            <img src="img/stavni.svg" alt="Ставни" class="products__image">
-            <p class="products__description">Ок. откосы</p>
-          </li>
-          <li class="products__item">
-            <img src="img/rakovina.svg" alt="Раковина" class="products__image">
-            <p class="products__description">Раковина</p>
-          </li>
-          <li class="products__item">
-            <img src="img/resepshen.svg" alt="Ресепшн" class="products__image">
-            <p class="products__description">Стойка рес-н</p>
-          </li>
-          <li class="products__item">
-            <img src="img/bar.svg" alt="Барная стойка" class="products__image">
-            <p class="products__description">Бар-я стойка</p>
-          </li>
-          <li class="products__item">
-            <a href="#" class="calculate__callback-button callback-button form-button">Не нашли подходящее?</a>
-          </li>
-        </ul>
-        <div class="calculate__edit-selected edit-selected">
-          <div class="edit-selected__container">
-            <div class="edit-selected__title-container">
-              <h3 class="edit-selected__title">Расчитать стоимость</h3>
-              <h4 class="edit-selected__subtitle">Столешницa</h4>
-            </div>
-            <button class="edit-selected__next-button">Подоконник</button>
-          </div>
-          <ul class="edit-selected__list">
-            <li class="edit-selected__item step formfactor formfactor">
-              <span class="step__number">01</span>
-              <p class="step__title">Выберите форму</p>
-              <ul class="step__list">
-                <li class="step__item">
-                  <img src="img/straight.svg" alt="Прямая столешница" class="step__form-image" data-formfactor="straight-sizes">
-                </li>
-                <li class="step__item">
-                  <img src="img/angular.svg" alt="Угловая столешница" class="step__form-image" data-formfactor="l-shaped">
-                </li>
-                <li class="step__item">
-                  <img src="img/u-shaped.svg" alt="П-образная столешница" class="step__form-image" data-formfactor="u-shaped-white">
-                </li>
-                <li class="step__item">
-                  <a href="#" class="step__callback-button form-button callback-button form-button">Не нашли?</a>
-                </li>
-              </ul>
-            </li>
-            <li class="edit-selected__item step sizes sizes--disabled">
-              <span class="step__number">02</span>
-              <p class="step__title">Укажите размеры</p>
-              <div class="step__input-sizes input-sizes">
-                <div class="input-sizes__image-container">
-                  <img src="img/close.svg" alt="П-образная столешница" class="input-sizes__image">
-                </div>
-                <ul class="input-sizes__list">
-                  <li class="input-sizes__item input-sizes__item--disabled">
-                    <p class="input-side-name">a</p>
-                    <input type="text" class="input-side-a" placeholder="Размер, см" value="" maxlength="4" disabled>
-                  </li>
-                  <li class="input-sizes__item input-sizes__item--disabled">
-                    <p class="input-side-name">b</p>
-                    <input type="text" class="input-side-b" placeholder="Размер, см" value="" maxlength="4" disabled>
-                  </li>
-                  <li class="input-sizes__item input-sizes__item--disabled">
-                    <p class="input-side-name">c</p>
-                    <input type="text" class="input-side-c" placeholder="Размер, см" value="" maxlength="4" disabled>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="edit-selected__item step materials materials--disabled">
-              <span class="step__number">03</span>
-              <p class="step__title">Выберите материал</p>
-              <ul class="edit-selected__materials materials__list">
-                <li class="materials__item" value="14000">
-                  <h5 class="materials__title">Акрил</h5>
-                  <ul class="materials__description-list">
-                    <li class="description-list__item">Дешевле</li>
-                    <li class="description-list__item">Полируется</li>
-                    <li class="description-list__item">Без швов</li>
-                  </ul>
-                  <div class="wind"></div>
-                </li>
-                <li class="materials__item" value="18000">
-                  <h5 class="materials__title">Кварц</h5>
-                  <ul class="materials__description-list">
-                    <li class="description-list__item">Дороже</li>
-                    <li class="description-list__item">Не царапается</li>
-                    <li class="description-list__item">Шов 1 - 2 мм</li>
-                  </ul>
-                  <div class="wind"></div>
-                </li>
-              </ul>
-            </li>
-            <li class="edit-selected__item result">
-              <div class="result__container">
-                <h5 class="result__title">Предварительный расчет</h5>
-              <span class="result__sum">0<sup>руб</sup></span>
-              <p class="result__description">Указанная стоимость включает производство по Вашим размерам и предмонтажную полировку изделия. Более точный заказ Вы можете сделать с помощью менеджера.</p>
-              </div>
-              <button class="result__callback-button button form-button">Оформить с помощью менеджера</button>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <section class="instagram">
+      <h3 class="instagram-title">Подпишись на наш Инстаграм!</h2>
+      <a href="#" class="instagram-link">
+        <svg class="instagram-image" height="50px" viewBox="0 0 511 511.9" width="50px" xmlns="http://www.w3.org/2000/svg"><path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/></svg>
+        <span>@acrilkam</span>
+      </a>
     </section>
   </main>
   <footer class="footer-page">
@@ -286,10 +166,10 @@
         <div class="footer-page__nav-container">
           <nav class="footer-page__nav nav">
             <ul class="nav__list">
-              <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+              <li class="nav__item"><a class="nav__link">О нас</a></li>
               <li class="nav__item"><a href="#" class="nav__link">Наши работы</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Материал</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+              <li class="nav__item"><a href="catalog.html" class="nav__link">Материал</a></li>
+              <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
               <li class="nav__item"><a href="#" class="nav__link">Ремонт</a></li>
             </ul>
           </nav>
@@ -304,29 +184,6 @@
         </div>
       </div>
     </div>
-    <div class="footer-page__bottom order">
-        <ul class="order__list">
-          <li class="order__item">
-            <img src="img/straight-sizes.svg" alt="П-образная столешница" class="order__image">
-          </li>
-          <li class="order__item">
-            <div class="order__name-and-size">
-              <p class="order__name">Столешница</p>
-              <p class="order__size">
-                <span>Размер</span>
-                <span>--- X --- X --- см</span>
-              </p>
-            </div>
-            <div class="order__preliminary">
-              <p>Предварительный расчёт</p>
-              <p>0<sup>руб</sup></p>
-            </div>
-          </li>
-          <li class="footer-page__order-item">
-            <button class="footer-page__button-resume button form-button">Продолжить оформление заказа</button>
-          </li>
-        </ul>
-      </div>
   </footer>
   <section class="feedback">
     <div class="wrapper">

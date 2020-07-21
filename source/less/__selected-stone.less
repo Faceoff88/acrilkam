@@ -1,0 +1,67 @@
+.selected-stone {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__title {
+    color: @grey-color;
+    letter-spacing: 5px;
+  }
+
+  .categories {
+    padding-top: 30px;
+    box-sizing: border-box;
+
+    &__title {
+      font-size: 16px;
+      color: darken(@doublelight-grey-color, 30%);
+      margin-bottom: 20px;
+    }
+
+    &__sublist {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__subitem {
+      margin-bottom: 30px;
+
+      &-name {
+        color: @orange-color;
+        margin-top: 10px;
+      }
+    }
+
+    &__image {
+      width: 150px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .selected-stone {
+    .categories {
+      &__sublist {
+        justify-content: flex-start;
+      }
+
+      &__subitem {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selected-stone {
+    .categories {
+      &__sublist {
+        justify-content: space-between;
+      }
+
+      &__image {
+        width: 180px;
+      }
+    }
+  }
+}
