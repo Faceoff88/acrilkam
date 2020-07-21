@@ -2,6 +2,7 @@
   &__title {
     text-align: center;
     font-size: 14px;
+    line-height: 22px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -14,7 +15,7 @@
       height: 2px;
       background-color: @orange-color;
       position: absolute;
-      bottom: -5px;
+      bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -22,6 +23,7 @@
 
   .about-us {
     margin-bottom: 50px;
+
     &__title-container {
       display: flex;
       justify-content: space-between;
@@ -36,49 +38,30 @@
     &__subtitle {
       color: darken(@doublelight-grey-color, 30%);
     }
+
+    &__text {
+      color: darken(@doublelight-grey-color, 60%);
+      line-height: 26px;
+    }
   }
+}
 
-  .why {
+@media (min-width: @tablet-width) {
+  .about-page {
     &__title {
-      text-align: center;
-      color: @orange-color;
-      margin-bottom: 30px;
+      font-size: 26px;
+      line-height: 34px;
     }
+  }
+}
 
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__item {
-      background-color: @light-grey-color;
-      width: 280px;
-      height: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-radius: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 3px 10px rgba(black, 0.4);
-    }
-
-    &__item-image {
-      fill: @orange-color;
-    }
-
-    &__item-title {
-      color: @cream-color;
-      margin-top: 30px;
-    }
-
-    &__item-text {
-      text-align: center;
-      margin-top: 20px;
-      line-height: 24px;
-      color: @doublelight-grey-color;
+@media (min-width: @desktop-width) {
+  .about-page {
+    &__title {
+      &::before {
+        max-width: 1060px;
+        bottom: -20px;
+      }
     }
   }
 }

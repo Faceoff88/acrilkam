@@ -255,6 +255,7 @@ var feedBack = document.querySelector('.feedback');
 var feedBackForm = document.querySelector('.feedback>.wrapper');
 var callFormButtons = document.querySelectorAll('.form-button');
 var feedbackClose = feedBack.querySelector('.feedback__close');
+console.log(feedBack);
 
 var onClickCallFormBtn = function (evt) {
   evt.preventDefault();

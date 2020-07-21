@@ -1,0 +1,39 @@
+.contacts-page {
+  .contacts {
+    padding-top: 50px;
+
+    &__title {
+      color: @grey-color;
+      margin-bottom: 30px;
+    }
+
+    &__address {
+      color: darken(@doublelight-grey-color, 30%);
+      margin-bottom: 20px;
+    }
+
+    &__phone {
+      color: darken(@doublelight-grey-color, 30%);
+      margin-bottom: 20px;
+
+      a {
+        color: @orange-color;
+        font-weight: 700;
+
+        &:hover,
+        &:focus,
+        &:active {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      margin-bottom: 50px;
+    }
+  }
+}
