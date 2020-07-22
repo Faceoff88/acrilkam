@@ -1,15 +1,32 @@
 .contacts-page {
   .contacts {
-    padding-top: 50px;
+    .wrapper {
+      position: relative;
+    }
+
+    &__text {
+      position: absolute;
+      left: 0;
+      top: 20px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 15px;
+      box-shadow: 10px -10px 15px rgba(black, 0.4);
+    }
 
     &__title {
       color: @grey-color;
       margin-bottom: 30px;
+      letter-spacing: 3px;
     }
 
     &__address {
       color: darken(@doublelight-grey-color, 30%);
       margin-bottom: 20px;
+      line-height: 22px;
     }
 
     &__phone {
@@ -32,8 +49,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 240px;
       border-radius: 15px;
-      margin-bottom: 50px;
     }
   }
 }
