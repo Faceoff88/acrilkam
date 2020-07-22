@@ -2,7 +2,7 @@ ymaps.ready(function () {
   var myMap = new ymaps.Map(
     "map",
     {
-      center: [55.770051, 37.595061],
+      center: [55.723307, 38.036377],
       zoom: 17,
       controls: []
     },
@@ -15,7 +15,7 @@ ymaps.ready(function () {
       '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
     ),
     myPlacemarkWithContent = new ymaps.Placemark(
-      [55.770051, 37.595061],
+      [55.723714, 38.040257],
       {
         hintContent: "Собственный значок метки с контентом",
         balloonContent:
@@ -29,10 +29,10 @@ ymaps.ready(function () {
         // Своё изображение иконки метки.
         iconImageHref: "img/map-marker.png",
         // Размеры метки.
-        iconImageSize: [156, 160],
+        iconImageSize: [116, 120],
         // Смещение левого верхнего угла иконки относительно
         // её "ножки" (точки привязки).
-        iconImageOffset: [-50, -190],
+        iconImageOffset: [-30, -120],
         // Смещение слоя с содержимым относительно слоя с картинкой.
         //iconContentOffset: [15, 15],
         // Макет содержимого.
@@ -41,4 +41,18 @@ ymaps.ready(function () {
     );
 
   myMap.geoObjects.add(myPlacemarkWithContent);
+
+  function onResizeMap() {
+    if (window.innerWidth < '660') {
+      myMap.setCenter([55.724495, 38.040264]);
+    } else if (window.innerWidth < '1200') {
+      myMap.setCenter([55.724065, 38.038055])
+    } else {
+      myMap.setCenter([55.723307, 38.036377]);
+    }
+  } onResizeMap();
+
+  window.onresize = function () {
+    onResizeMap();
+  };
 });
