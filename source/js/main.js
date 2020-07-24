@@ -51,4 +51,10 @@ var onCloseForm = function (evt) {
   feedBackForm.style.top = '-100%';
 
   feedbackClose.removeEventListener('click', onCloseForm);
-}
+};
+
+var texts = document.querySelectorAll('.production-dates__description');
+for (let text of texts) {
+  text.innerHTML = text.textContent.split('')
+    .map((e, i) => `<span style="--rot:${i * 16}deg">${e}</span>`).join('');
+};

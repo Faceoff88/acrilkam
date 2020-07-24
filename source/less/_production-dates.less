@@ -1,5 +1,9 @@
 .production-dates {
   padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 
   &__title {
     color: @orange-color;
@@ -17,19 +21,54 @@
   &__list {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    margin-top: 130px;
   }
 
   &__item {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 180px;
     height: 96px;
+    position: relative;
+
+    &:first-child p {
+      transform: rotate(-40deg);
+      left: -38px;
+      top: -55px;
+    }
+
+    &:nth-child(2) p {
+      transform: rotate(-87deg);
+      left: -26px;
+      top: -80px;
+    }
+
+    &:last-child p {
+      transform: rotate(-40deg);
+      left: -38px;
+      top: -55px;
+    }
 
     p {
-      margin-left: 15%;
+      display: inline-block;
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      text-align: center;
+      line-height: 200px;
+      font-size: 22px;
       font-weight: 700;
-      color: @orange-color;
+      color: @light-grey-color;
+      opacity: 0.3;
+
+      span {
+        display: inline-block;
+        width: 25px;
+        position: absolute;
+        transform: translate(-12.5px, 0) rotate(var(--rot)) translate(0, -90px);
+        z-index: -3;
+      }
     }
 
     &:last-child {
@@ -37,26 +76,7 @@
     }
 
     &:nth-child(2n) {
-      flex-direction: row-reverse;
       position: relative;
-
-      &::after {
-        content: url("../img/right-arrow.svg");
-        position: absolute;
-        left: 50%;
-        top: -28px;
-        transform: translateX(-50%);
-        opacity: 0.2;
-      }
-
-      &::before {
-        content: url("../img/left-arrow.svg");
-        position: absolute;
-        left: 50%;
-        bottom: -28px;
-        transform: translateX(-50%);
-        opacity: 0.2;
-      }
 
       p {
         margin-left: 0;
@@ -65,9 +85,40 @@
     }
   }
 
+  &__image-block {
+    position: relative;
+    background: @light-grey-color;
+    width: 150px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 2px 2px 1px rgba(@orange-color, 0.3),
+      10px 5px 10px 0 rgba(@orange-color, 0.6),
+      10px 10px 12px 0 rgba(@grey-color, 1);
+
+    &::after {
+      content: "";
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      box-shadow: inset 2px 2px 1px rgba(@orange-color, 0.3),
+        inset 10px 5px 10px 0 rgba(@orange-color, 0.6),
+        inset 10px 10px 12px 0 rgba(@grey-color, 1);
+    }
+  }
+
   &__image {
     max-width: 100%;
-    width: 100px;
+    width: 80px;
+    fill: @orange-color;
   }
 }
 
@@ -95,37 +146,32 @@
 
     &__list {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       margin-bottom: 50px;
     }
 
     &__item {
       flex-direction: column;
       justify-content: center;
+      margin-bottom: 25px;
 
-      &:nth-child(2n) {
-        flex-direction: column;
-
-        &::after {
-          left: 165%;
-          top: 50%;
-          transform: rotate(-45deg) translateY(-50%);
-        }
-
-        &::before {
-          left: -80%;
-          bottom: 50%;
-          transform: rotate(225deg) translateY(-80%);
-        }
-
-        p {
-          margin-right: 0;
-        }
+      &:first-child p {
+        transform: rotate(-40deg);
+        left: -38px;
+        top: -55px;
       }
 
-      p {
-        margin-left: 0;
-        margin-top: 20px;
+      &:nth-child(2) p {
+        transform: rotate(-87deg);
+        left: -26px;
+        top: -80px;
+      }
+
+      &:last-child p {
+        transform: rotate(-40deg);
+        left: -38px;
+        top: -55px;
+        z-index: -1;
       }
     }
   }
@@ -133,19 +179,26 @@
 
 @media (min-width: @desktop-width) {
   .production-dates {
+    &__list {
+      margin: 0 auto;
+      width: calc(100% - 100px);
+      margin-top: 130px;
+      justify-content: space-between;
+    }
+
     &__item {
       &:nth-child(2n) {
         flex-direction: column;
 
         &::after {
-          left: 245%;
-          top: 50%;
+          left: 180%;
+          top: 30%;
           transform: rotate(-45deg) translateY(-50%);
         }
 
         &::before {
-          left: -160%;
-          bottom: 50%;
+          left: -85%;
+          bottom: 70%;
           transform: rotate(225deg) translateY(-80%);
         }
       }
