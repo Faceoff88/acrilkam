@@ -2747,6 +2747,34 @@ button {
     margin-bottom: 30px;
   }
 }
+.service {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #323232;
+}
+.service em {
+  color: #323232;
+}
+.service strong {
+  color: #323232;
+}
+.service p {
+  color: #a0a0a0;
+  margin-top: 20px;
+}
+.service h2 {
+  font-size: 16px;
+}
+.service a {
+  color: #d47d42;
+  text-decoration: underline;
+}
+.service li {
+  margin-bottom: 10px;
+}
+.service li:first-child {
+  margin-top: 20px;
+}
 .feedback {
   width: 100%;
   height: 100%;
