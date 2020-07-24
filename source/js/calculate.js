@@ -217,8 +217,8 @@ var onChangeMaterial = function (evt) {
     resultSum.innerHTML = 'от ' + (priceOfMetr - 10000) + '<sup>руб</sup>';
     footerOrderResult.innerHTML = 'от ' + (priceOfMetr - 10000) + '<sup>руб</sup>';
   } else {
-    resultSum.innerHTML = result + '<sup>руб</sup>';
-    footerOrderResult.innerHTML = result + '<sup>руб</sup>';
+    resultSum.innerHTML = Math.round(result) + '<sup>руб</sup>';
+    footerOrderResult.innerHTML = Math.round(result) + '<sup>руб</sup>';
   }
 };
 

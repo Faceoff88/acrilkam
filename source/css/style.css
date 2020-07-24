@@ -856,6 +856,10 @@ button {
 }
 .production-dates {
   padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 .production-dates__title {
   color: #d47d42;
@@ -876,9 +880,10 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 130px;
 }
 .production-dates__item {
   display: -webkit-box;
@@ -887,49 +892,95 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 180px;
   height: 96px;
+  position: relative;
+}
+.production-dates__item:first-child p {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  left: -38px;
+  top: -55px;
+}
+.production-dates__item:nth-child(2) p {
+  -webkit-transform: rotate(-87deg);
+          transform: rotate(-87deg);
+  left: -26px;
+  top: -80px;
+}
+.production-dates__item:last-child p {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  left: -38px;
+  top: -55px;
 }
 .production-dates__item p {
-  margin-left: 15%;
+  display: inline-block;
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  text-align: center;
+  line-height: 200px;
+  font-size: 22px;
   font-weight: 700;
-  color: #d47d42;
+  color: #414141;
+  opacity: 0.3;
+}
+.production-dates__item p span {
+  display: inline-block;
+  width: 25px;
+  position: absolute;
+  -webkit-transform: translate(-12.5px, 0) rotate(var(--rot)) translate(0, -90px);
+          transform: translate(-12.5px, 0) rotate(var(--rot)) translate(0, -90px);
+  z-index: -3;
 }
 .production-dates__item:last-child {
   margin-bottom: 25px;
 }
 .production-dates__item:nth-child(2n) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
   position: relative;
-}
-.production-dates__item:nth-child(2n)::after {
-  content: url("../img/right-arrow.svg");
-  position: absolute;
-  left: 50%;
-  top: -28px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  opacity: 0.2;
-}
-.production-dates__item:nth-child(2n)::before {
-  content: url("../img/left-arrow.svg");
-  position: absolute;
-  left: 50%;
-  bottom: -28px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  opacity: 0.2;
 }
 .production-dates__item:nth-child(2n) p {
   margin-left: 0;
   margin-right: 15%;
 }
+.production-dates__image-block {
+  position: relative;
+  background: #414141;
+  width: 150px;
+  min-height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 1px rgba(212, 125, 66, 0.3), 10px 5px 10px 0 rgba(212, 125, 66, 0.6), 10px 10px 12px 0 #323232;
+          box-shadow: 2px 2px 1px rgba(212, 125, 66, 0.3), 10px 5px 10px 0 rgba(212, 125, 66, 0.6), 10px 10px 12px 0 #323232;
+}
+.production-dates__image-block::after {
+  content: "";
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+  -webkit-box-shadow: inset 2px 2px 1px rgba(212, 125, 66, 0.3), inset 10px 5px 10px 0 rgba(212, 125, 66, 0.6), inset 10px 10px 12px 0 #323232;
+          box-shadow: inset 2px 2px 1px rgba(212, 125, 66, 0.3), inset 10px 5px 10px 0 rgba(212, 125, 66, 0.6), inset 10px 10px 12px 0 #323232;
+}
 .production-dates__image {
   max-width: 100%;
-  width: 100px;
+  width: 80px;
+  fill: #d47d42;
 }
 @media (min-width: 660px) {
   .production-dates__title-container {
@@ -961,9 +1012,8 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-bottom: 50px;
   }
   .production-dates__item {
@@ -974,34 +1024,37 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 25px;
   }
-  .production-dates__item:nth-child(2n) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .production-dates__item:first-child p {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+    left: -38px;
+    top: -55px;
   }
-  .production-dates__item:nth-child(2n)::after {
-    left: 165%;
-    top: 50%;
-    -webkit-transform: rotate(-45deg) translateY(-50%);
-            transform: rotate(-45deg) translateY(-50%);
+  .production-dates__item:nth-child(2) p {
+    -webkit-transform: rotate(-87deg);
+            transform: rotate(-87deg);
+    left: -26px;
+    top: -80px;
   }
-  .production-dates__item:nth-child(2n)::before {
-    left: -80%;
-    bottom: 50%;
-    -webkit-transform: rotate(225deg) translateY(-80%);
-            transform: rotate(225deg) translateY(-80%);
-  }
-  .production-dates__item:nth-child(2n) p {
-    margin-right: 0;
-  }
-  .production-dates__item p {
-    margin-left: 0;
-    margin-top: 20px;
+  .production-dates__item:last-child p {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+    left: -38px;
+    top: -55px;
+    z-index: -1;
   }
 }
 @media (min-width: 1200px) {
+  .production-dates__list {
+    margin: 0 auto;
+    width: calc(100% - 100px);
+    margin-top: 130px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .production-dates__item:nth-child(2n) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1009,14 +1062,14 @@ button {
             flex-direction: column;
   }
   .production-dates__item:nth-child(2n)::after {
-    left: 245%;
-    top: 50%;
+    left: 180%;
+    top: 30%;
     -webkit-transform: rotate(-45deg) translateY(-50%);
             transform: rotate(-45deg) translateY(-50%);
   }
   .production-dates__item:nth-child(2n)::before {
-    left: -160%;
-    bottom: 50%;
+    left: -85%;
+    bottom: 70%;
     -webkit-transform: rotate(225deg) translateY(-80%);
             transform: rotate(225deg) translateY(-80%);
   }
