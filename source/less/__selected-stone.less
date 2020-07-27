@@ -25,10 +25,26 @@
 
     &__subitem {
       margin-bottom: 30px;
+      position: relative;
 
       &-name {
         color: @orange-color;
         margin-top: 10px;
+      }
+
+      &-price {
+        color: darken(@doublelight-grey-color, 35%);
+        font-size: 12px;
+        margin-top: 5px;
+      }
+
+      .popup-link {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
       }
     }
 
