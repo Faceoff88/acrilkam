@@ -58,3 +58,29 @@ for (let text of texts) {
   text.innerHTML = text.textContent.split('')
     .map((e, i) => `<span style="--rot:${i * 16}deg">${e}</span>`).join('');
 };
+
+
+// POPUP
+
+var categories = document.querySelector('.categories');
+var closePopup = document.querySelector('.stone-popup__close');
+var stonePopup = document.querySelector('.stone-popup');
+var stonePopupTitle = stonePopup.querySelector('.stone-popup__title');
+
+var getSelectedStoneInfo = function (evt) {
+  evt.preventDefault();
+
+  var target = evt.target;
+  if (target.className == 'categories__subitem-link popup-link') {
+    stonePopup.classList.add('stone-popup--open');
+    closePopup.addEventListener('click', onClosePopup);
+  }
+}
+
+var onClosePopup = function (evt) {
+  evt.preventDefault();
+  stonePopup.classList.remove('stone-popup--open');
+  closePopup.removeEventListener('click', onClosePopup);
+}
+
+categories.addEventListener('click', getSelectedStoneInfo);

@@ -1,0 +1,136 @@
+.stone-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(black, 0.8);
+  z-index: 9;
+  overflow-y: auto;
+  display: none;
+
+  .wrapper {
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    top: -110%;
+    margin-bottom: 50px;
+    padding: 30px 10px 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 0.25s;
+  }
+
+  &__title {
+    color: @orange-color;
+    margin-bottom: 10px;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    margin-bottom: 10px;
+    text-align: center;
+    color: darken(@doublelight-grey-color, 35%);
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: @grey-color;
+    border-radius: 10px;
+    color: @orange-color;
+    box-shadow: 0 3px 10px rgba(black, 0.4);
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      background-color: @doublelight-grey-color;
+    }
+
+    &:active {
+      box-shadow: none;
+      background-color: @doublelight-grey-color;
+    }
+  }
+
+  &__table {
+    tr {
+      height: 50px;
+    }
+
+    th {
+      font-weight: 700;
+      color: @orange-color;
+    }
+
+    td {
+      &:first-child {
+        color: @grey-color;
+      }
+
+      &:last-child {
+        color: darken(@doublelight-grey-color, 35%);
+      }
+    }
+
+    &-desc-of-size {
+      span {
+        display: inline-block;
+        color: @grey-color;
+
+        &:first-child {
+          font-weight: 700;
+        }
+
+        &:last-child {
+          color: @orange-color;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  &__close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/close.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    cursor: pointer;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .stone-popup {
+    .wrapper {
+      width: 500px;
+    }
+  }
+}
+
+
+.stone-popup--open {
+  display: block;
+
+  .wrapper {
+    top: 40px;
+  }
+}

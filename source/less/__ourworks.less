@@ -44,7 +44,9 @@
       transition: ease-in-out 0.25s;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       color: @orange-color;
 
       &::before {
@@ -167,8 +169,10 @@
     &__list {
       justify-content: flex-start;
     }
+
     &__item {
       margin-right: 110px;
+
       &:nth-child(3n) {
         margin-right: 0;
       }
