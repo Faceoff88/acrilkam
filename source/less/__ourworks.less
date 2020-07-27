@@ -1,6 +1,7 @@
 .ourworks {
   padding-top: 50px;
   padding-bottom: 50px;
+  min-height: 400px;
 
   &__header-title {
     font-size: 16px;
@@ -157,6 +158,20 @@
 
     &__nav-item {
       margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .ourworks {
+    &__list {
+      justify-content: flex-start;
+    }
+    &__item {
+      margin-right: 110px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
   }
 }

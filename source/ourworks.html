@@ -44,16 +44,17 @@
           <h2 class="ourworks__header-title">Выберите категорию</h2>
           <nav class="ourworks__nav">
             <ul class="ourworks__nav-list">
-              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link">Камины</a></li>
-              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link">Раковины</a></li>
-              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link">Столешницы</a></li>
-              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link">Подоконники</a></li>
-              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link">Стойки ресепшн</a></li>
+              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link" data-name="all">Все</a></li>
+              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link" data-name="kamin">Камины</a></li>
+              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link" data-name="rakovina">Раковины</a></li>
+              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link" data-name="stoleshnica">Столешницы</a></li>
+              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link" data-name="podokonnik">Подоконники</a></li>
+              <li class="ourworks__nav-item"><a href="#" class="ourworks__nav-link" data-name="resepshen">Стойки ресепшн</a></li>
             </ul>
           </nav>
         </header>
         <ul class="ourworks__list">
-          <li class="ourworks__item">
+          <li class="ourworks__item" data-product="stoleshnica">
             <img src="img/1.png" alt="Столешница" class="ourworks__image">
             <div class="ourworks__more-container">
               <a href="#" class="ourworks__more-button">Подробнее</a>
@@ -65,7 +66,7 @@
             <h3 class="ourworks__name">Столешница</h4>
             <h4 class="ourworks__material">Акрил</h5>
           </li>
-          <li class="ourworks__item">
+          <li class="ourworks__item" data-product="stoleshnica">
             <img src="img/2.png" alt="Столешница" class="ourworks__image">
             <div class="ourworks__more-container">
               <a href="#" class="ourworks__more-button">Подробнее</a>
@@ -77,7 +78,7 @@
             <h3 class="ourworks__name">Столешница</h4>
             <h4 class="ourworks__material">Акрил</h5>
           </li>
-          <li class="ourworks__item">
+          <li class="ourworks__item" data-product="rakovina">
             <img src="img/3.png" alt="Раковина" class="ourworks__image">
             <div class="ourworks__more-container">
               <a href="#" class="ourworks__more-button">Подробнее</a>
@@ -89,7 +90,7 @@
             <h3 class="ourworks__name">Раковина</h4>
             <h4 class="ourworks__material">Акрил</h5>
           </li>
-          <li class="ourworks__item">
+          <li class="ourworks__item" data-product="resepshen">
             <img src="img/4.png" alt="Стойка ресепшн" class="ourworks__image">
             <div class="ourworks__more-container">
               <a href="#" class="ourworks__more-button">Подробнее</a>
@@ -101,7 +102,7 @@
             <h3 class="ourworks__name">Стойка ресепшн</h4>
             <h4 class="ourworks__material">Акрил</h5>
           </li>
-          <li class="ourworks__item">
+          <li class="ourworks__item" data-product="kamin">
             <img src="img/5.png" alt="Камин" class="ourworks__image">
             <div class="ourworks__more-container">
               <a href="#" class="ourworks__more-button">Подробнее</a>
@@ -113,7 +114,7 @@
             <h3 class="ourworks__name">Камин</h4>
             <h4 class="ourworks__material">Акрил</h5>
           </li>
-          <li class="ourworks__item">
+          <li class="ourworks__item" data-product="stoleshnica">
             <img src="img/2.png" alt="Столешница" class="ourworks__image">
             <div class="ourworks__more-container">
               <a href="#" class="ourworks__more-button">Подробнее</a>
@@ -123,6 +124,30 @@
               <p class="ourworks__price">19500.-</p>
             </div>
             <h3 class="ourworks__name">Столешница</h4>
+            <h4 class="ourworks__material">Акрил</h5>
+          </li>
+          <li class="ourworks__item" data-product="rakovina">
+            <img src="img/3.png" alt="Раковина" class="ourworks__image">
+            <div class="ourworks__more-container">
+              <a href="#" class="ourworks__more-button">Подробнее</a>
+            </div>
+            <div class="ourworks__params">
+              <p class="ourworks__sizes">1200 Х 570 Х 450 мм</p>
+              <p class="ourworks__price">9500.-</p>
+            </div>
+            <h3 class="ourworks__name">Раковина</h4>
+            <h4 class="ourworks__material">Акрил</h5>
+          </li>
+          <li class="ourworks__item" data-product="rakovina">
+            <img src="img/3.png" alt="Раковина" class="ourworks__image">
+            <div class="ourworks__more-container">
+              <a href="#" class="ourworks__more-button">Подробнее</a>
+            </div>
+            <div class="ourworks__params">
+              <p class="ourworks__sizes">1200 Х 570 Х 450 мм</p>
+              <p class="ourworks__price">9500.-</p>
+            </div>
+            <h3 class="ourworks__name">Раковина</h4>
             <h4 class="ourworks__material">Акрил</h5>
           </li>
         </ul>
@@ -205,5 +230,6 @@
     </div>
   </section>
   <script src="js/main.js"></script>
+  <script src="js/ourworks-filter.js"></script>
 </body>
 </html>
