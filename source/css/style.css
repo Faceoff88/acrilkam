@@ -2566,6 +2566,7 @@ button {
 .ourworks {
   padding-top: 50px;
   padding-bottom: 50px;
+  min-height: 400px;
 }
 .ourworks__header-title {
   font-size: 16px;
@@ -2745,6 +2746,19 @@ button {
   }
   .ourworks__nav-item {
     margin-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .ourworks__list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .ourworks__item {
+    margin-right: 110px;
+  }
+  .ourworks__item:nth-child(3n) {
+    margin-right: 0;
   }
 }
 .service {
