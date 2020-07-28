@@ -2,7 +2,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   position: relative;
-  z-index: 2;
+  z-index: 4;
   background-color: @dark-grey-color;
 
   &__logo {
@@ -54,12 +54,13 @@
   width: 100%;
   background-color: white;
   box-shadow: 0 5px 20px rgba(black, 0.7);
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.2s;
 
   &__item {
     height: 60px;
     display: flex;
     border-bottom: 2px solid @grey-color;
+    position: relative;
 
     &:hover,
     &:focus {
@@ -155,7 +156,7 @@
 
 .main-nav--open {
   visibility: visible;
-  top: 125px;
+  top: 123px;
 }
 
 .social-icons {
