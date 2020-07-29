@@ -205,7 +205,7 @@ var onChangeMaterial = function (evt) {
   if (target.className == 'materials__item') {
     target.classList.add('materials__item--active');
   }
-  var priceOfMetr = materialsList.querySelector('.materials__item--active').value;
+  var priceOfMetr = materialsList.querySelector('.materials__item--active').dataset.value;
   var resultSum = document.querySelector('.result__sum');
   var result = fullSpaceProductsInMetr * priceOfMetr;
   footerOrder.classList.add('order--active');
